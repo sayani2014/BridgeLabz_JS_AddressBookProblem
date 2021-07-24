@@ -1,6 +1,5 @@
 /**
- * Ability to ensure there is no Duplicate Entry of the same Person in the Address Book 
-    - Duplicate Check is done on Person Name before adding person to Address Book.
+ * Ability to search Person in a particular City or State 
     - Use Array Functions of filter, map, reduce, etc to do the check
  * 
  * @author: SAYANI KOLEY
@@ -43,6 +42,10 @@ while( flag ) {
             console.log();
             break;
         case 6:
+            addressBookService.searchContact(personInfoList);
+            console.log();
+            break;   
+        case 7:
             flag = false;
             break;    
         default:

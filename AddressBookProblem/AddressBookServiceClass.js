@@ -101,6 +101,34 @@ class AddressBookService {
         });
         return personInfoList;
     }
+
+    searchContact(personInfoList) {
+        console.log("Press 1 to search by City");
+        console.log("Press 2 to search by State");
+        let option = parseInt(prompt("Enter your choice : "));
+
+        switch(option) {
+            case 1:
+                let city = prompt("Enter the City you want to search the person for : ");
+                personInfoList.forEach(element => {
+                    if( (element.city === city) == true ) {
+                        console.log(element);
+                    }
+                });
+                break;
+            case 2:
+                let state = prompt("Enter the State you want to search the person for : ");
+                personInfoList.forEach(element => {
+                    if( (element.state === state) == true ) {
+                        console.log(element);
+                    }
+                });
+                break;
+            default:
+                console.log("You have entered invalid input!");
+                break;
+        }
+    }
 }
 
 module.exports = AddressBookService;
