@@ -1,6 +1,6 @@
 /**
- * Ability to view Persons by City or State 
-    - Use Array Functions of filter, map, reduce, etc to do the check
+ * Ability to get number of contact persons i.e. count by City or State 
+    - Search Result will show count by city and by state
  * 
  * @author: SAYANI KOLEY
  * @since: 24.07.2021
