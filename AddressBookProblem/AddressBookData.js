@@ -1,5 +1,9 @@
 /**
- * Ability to create a Address Book Contact with first and last names, address, city, state, zip, phone number and email.
+ * Ability to ensure Valid Contacts are added.
+     - First Name and Last Name should start with Capital and Minimum 3 Characters
+     - Address, City and State should also have minimum 4 characters
+     - Zip, Phone and Email should be valid as done in the Pattern Exercise
+     - Throw Error if the RegEx test fails
  * 
  * @author: SAYANI KOLEY
  * @since: 24.07.2021
@@ -9,27 +13,17 @@
 const PersonInfo = require("./PersonInfoData.js"); 
 const prompt = require('prompt-sync')();
 
-//Ability to add values to the PersonInfoData
-var personInfo = new PersonInfo("Sayani", "Koley", "Hwh", "Hwh", "WB", "711101", "7894561230", "sk@abc.in");
-console.log(personInfo.toString());
-
-personInfo.firstName = "Megha";
-personInfo.lastName = "Ganguly";
-personInfo.address = "Hinjewadi";
-personInfo.city = "Pune";
-personInfo.state = "Maharashtra";
-personInfo.zip = "456123";
-personInfo.phoneNumber = "8974561230";
-personInfo.email = "mg@abc.in";
-console.log(personInfo.toString());
-
-//Ability to add user-defined values to the PersonInfoData
-personInfo.firstName = prompt("Enter First Name : "); 
-personInfo.lastName = prompt("Enter Last Name : "); 
-personInfo.address = prompt("Enter Address : "); 
-personInfo.city = prompt("Enter City : "); 
-personInfo.state = prompt("Enter State : "); 
-personInfo.zip = prompt("Enter Zip : "); 
-personInfo.phoneNumber = prompt("Enter Phone Number : "); 
-personInfo.email = prompt("Enter Email : "); 
-console.log(personInfo.toString());
+try{
+    let personInfo = new PersonInfo();
+    personInfo.fName = prompt("Enter First Name : "); 
+    personInfo.lName = prompt("Enter Last Name : "); 
+    personInfo.addressName = prompt("Enter Address : "); 
+    personInfo.cityName = prompt("Enter City : "); 
+    personInfo.stateName = prompt("Enter State : "); 
+    personInfo.zipNumber = prompt("Enter Zip : "); 
+    personInfo.phoneNumberInput = prompt("Enter Phone Number : "); 
+    personInfo.emailInput = prompt("Enter Email : "); 
+    console.log(personInfo.toString());
+} catch ( e ) {
+    console.error(e);
+}
