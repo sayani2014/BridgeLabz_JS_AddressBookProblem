@@ -1,5 +1,5 @@
 /**
- * Ability to search Person in a particular City or State 
+ * Ability to view Persons by City or State 
     - Use Array Functions of filter, map, reduce, etc to do the check
  * 
  * @author: SAYANI KOLEY
