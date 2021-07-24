@@ -137,6 +137,9 @@ class AddressBookService {
 
     sortContact(personInfoList) {
         console.log("Press 1 to sort the Address Book by First Name");
+        console.log("Press 2 to sort the Address Book by City");
+        console.log("Press 3 to sort the Address Book by State");
+        console.log("Press 4 to sort the Address Book by Zip");
         let option = parseInt(prompt("Enter your choice : "));
 
         switch( option ) {
@@ -148,6 +151,36 @@ class AddressBookService {
                     return a.fName < b.fName ? -1 : 1;
                   });
                 console.log(personInfoList);
+                break;
+            case 2:
+                personInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.city < b.city ? -1 : 1;
+                    });
+                console.log(personInfoList);
+                break;
+            case 3:
+                personInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.state < b.state ? -1 : 1;
+                    });
+                console.log(personInfoList);
+                break;
+            case 4:
+                personInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.zip < b.zip ? -1 : 1;
+                    });
+                console.log(personInfoList);
+                break;
+            default:
+                console.log("You have entered invalid input!");
                 break;
         }
     }

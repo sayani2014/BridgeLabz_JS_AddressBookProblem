@@ -1,5 +1,7 @@
 /**
- * Ability to sort the entries in the address book alphabetically by Person’s name
+ * Ability to sort the entries in the address book by City, State, or Zip 
+    - Write functions to sort person by City, State or Zip
+    - Use Array Functions of filter, map, reduce, etc to do the check
  * 
  * @author: SAYANI KOLEY
  * @since: 24.07.2021
