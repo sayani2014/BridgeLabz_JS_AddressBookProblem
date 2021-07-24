@@ -1,6 +1,5 @@
 /**
- * Ability to get number of contact persons i.e. count by City or State 
-    - Search Result will show count by city and by state
+ * Ability to sort the entries in the address book alphabetically by Person’s name
  * 
  * @author: SAYANI KOLEY
  * @since: 24.07.2021
@@ -46,6 +45,10 @@ while( flag ) {
             console.log();
             break;   
         case 7:
+            addressBookService.sortContact(personInfoList);
+            console.log();
+            break; 
+        case 8:
             flag = false;
             break;    
         default:

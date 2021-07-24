@@ -134,6 +134,23 @@ class AddressBookService {
                 break;
         }
     }
+
+    sortContact(personInfoList) {
+        console.log("Press 1 to sort the Address Book by First Name");
+        let option = parseInt(prompt("Enter your choice : "));
+
+        switch( option ) {
+            case 1:
+                personInfoList.sort((a, b) => {
+                    if (a === b) {
+                      return 0;
+                    }
+                    return a.fName < b.fName ? -1 : 1;
+                  });
+                console.log(personInfoList);
+                break;
+        }
+    }
 }
 
 module.exports = AddressBookService;
