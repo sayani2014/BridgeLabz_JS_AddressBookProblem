@@ -75,6 +75,16 @@ class AddressBookService {
         });
         return personInfoList;
     }
+
+    deleteContact(personInfoList, fname) {
+        personInfoList.forEach(element => {
+            if( (element.fName === fname) == true ) {
+                let index = personInfoList.indexOf(fname);
+                personInfoList.splice(index, 1);
+            }
+        });
+        return personInfoList;
+    }
 }
 
 module.exports = AddressBookService;

@@ -1,5 +1,5 @@
 /**
- * Ability to find existing contact person using their name and edit it
+ * Ability to find a person with name delete it from the array
  * 
  * @author: SAYANI KOLEY
  * @since: 24.07.2021
@@ -29,6 +29,10 @@ while( flag ) {
             personInfoList = addressBookService.editContact(personInfoList, fname);
             break; 
         case 4:
+            let personName = prompt("Enter the First Name of the Contact : ");
+            personInfoList = addressBookService.deleteContact(personInfoList, personName);
+            break; 
+        case 5:
             flag = false;
             break;    
         default:
