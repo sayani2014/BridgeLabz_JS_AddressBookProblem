@@ -6,6 +6,7 @@ class AddressBookService {
     personInfoList = new Array();
 
     insert(personInfoList) {
+        let found = false;
         try{
             let personInfo = new PersonInfo();
             personInfo.fName = prompt("Enter First Name : "); 
@@ -17,7 +18,22 @@ class AddressBookService {
             personInfo.phoneNumberInput = prompt("Enter Phone Number : "); 
             personInfo.emailInput = prompt("Enter Email : "); 
 
-            personInfoList.push(personInfo);
+            if( personInfoList.length < 0 ) {
+                personInfoList.push(personInfo);
+            } else if ( personInfoList.length >= 0 ) {
+                personInfoList.forEach(element => {
+                    if( (element.fName === personInfo.fName ) == true ) {
+                        found = true;
+                        return;
+                    }
+                });
+                if( found == true ) {
+                    console.log();
+                    console.log("Duplicate entry exists!");
+                } else {
+                    personInfoList.push(personInfo);
+                }
+            }
 
             return personInfoList;
         } catch ( e ) {

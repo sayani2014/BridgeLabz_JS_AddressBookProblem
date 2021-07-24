@@ -1,5 +1,7 @@
 /**
- * Ability to find number of contacts in the address book
+ * Ability to ensure there is no Duplicate Entry of the same Person in the Address Book 
+    - Duplicate Check is done on Person Name before adding person to Address Book.
+    - Use Array Functions of filter, map, reduce, etc to do the check
  * 
  * @author: SAYANI KOLEY
  * @since: 24.07.2021
